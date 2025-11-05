@@ -71,4 +71,3 @@ Make sure utility files `utils.py` (password hashing, token management) exist wi
 
 ---
 
-Happy hacking! 🎬
