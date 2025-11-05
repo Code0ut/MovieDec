@@ -70,5 +70,3 @@ Make sure utility files `utils.py` (password hashing, token management) exist wi
 - **CORS errors**: Edit the CORS settings in `main.py` as necessary (for non-local frontend)
 
 ---
-
-Happy hacking! 🎬
