@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieDec - Movie Recommendations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Authentication View -->
+    <div id="auth-view" class="auth-container">
+        <div class="auth-box">
+            <h1 class="logo">MovieDec</h1>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <input type="text" id="login-username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <input type="text" id="register-username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="register-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+
+            <div id="auth-message" class="message"></div>
+        </div>
+    </div>
+
+    <!-- Main Application View -->
+    <div id="main-app" class="main-app hidden">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <h1 class="logo">MovieDec</h1>
+            </div>
+            <div class="nav-center">
+                <button class="nav-link active" data-page="all-movies">All Movies</button>
+                <button class="nav-link" data-page="recommendations">My Recommendations</button>
+            </div>
+            <div class="nav-right">
+                <button id="theme-toggle" class="icon-btn" title="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <span id="user-name" class="username"></span>
+                <button id="logout-btn" class="btn-secondary">Logout</button>
+            </div>
+        </nav>
+
+        <!-- All Movies Page -->
+        <div id="all-movies-page" class="page active">
+            <div class="page-header">
+                <h2>All Movies</h2>
+                <div class="controls">
+                    <input type="text" id="search-input" placeholder="Search movies..." class="search-input">
+                    <select id="genre-filter" class="genre-select">
+                        <option value="">All Genres</option>
+                    </select>
+                </div>
+            </div>
+            <div id="movies-grid" class="movies-grid">
+                <!-- Movie cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Recommendations Page -->
+        <div id="recommendations-page" class="page">
+            <div class="page-header">
+                <h2>My Recommendations</h2>
+            </div>
+            <div id="recommendations-content" class="recommendations-content">
+                <!-- Recommendations will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
